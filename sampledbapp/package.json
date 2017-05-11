@@ -1,0 +1,26 @@
+{
+  "name": "samplemongodbapplication",
+  "version": "1.0.0",
+  "description": "MongoDB application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gireeshcse/nodejsprojects.git"
+  },
+  "keywords": [
+    "mongodb",
+    "nodejs"
+  ],
+  "author": "gireesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gireeshcse/nodejsprojects/issues"
+  },
+  "homepage": "https://github.com/gireeshcse/nodejsprojects#readme",
+  "dependencies": {
+    "mongodb": "^2.2.26"
+  }
+}
