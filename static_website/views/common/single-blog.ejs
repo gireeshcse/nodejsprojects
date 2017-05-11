@@ -1,0 +1,40 @@
+<div id="breadcrumb">
+		<div class="container">	
+			<div class="breadcrumb">							
+				<li><a href="index.html">Home</a></li>
+				<li>Blog</li>			
+			</div>		
+		</div>	
+	</div>
+
+<section id="blog" class="container">
+        <div class="blog">
+            <div class="row">
+                 <div class="col-md-8">
+                        <div class="blog-item">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-2">
+                                    <div class="entry-meta">
+                                        <span id="publish_date">07  JUNY</span>
+                                        <span><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
+                                        <span><i class="fa fa-comment"></i> <a href="#">2 Comments</a></span>
+                                        <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                                    </div>
+                                </div>
+                                    
+                                <div class="col-xs-12 col-sm-10 blog-content">
+                                    <a href="#"><img class="img-responsive img-blog" src="/images/blog/<%= blog.image  %>" width="100%" alt="" /></a>
+                                    <h4><%= blog.title  %></h4>
+                                    <p><%= blog.description  %></p>
+                                    <p><%= blog.summary  %></p>
+                                    
+                                    
+                                </div>
+                            </div>    
+                        </div><!--/.blog-item-->
+                        </div><!--/.col-md-8-->
+
+                <%- include aside  %>
+            </div><!--/.row-->
+</div>
+</section><!--/#blog-->
