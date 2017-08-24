@@ -55,8 +55,6 @@ app.controller('calendarCtrl', function($scope, $http) {
     * month - Present Month example 8 for August
     * month_first_day - Day no. of Present Month example if month starts with Tuesday send 2
     * date - Default Todays Date i.e Todays is 26th Aug,2017 then send 26
-    * leap_year - If year you sent is leap year send 1 else 0 (If it is leap year set no. of days in feb to 29 else 28)
-    * next_leap_year - After How many years from current year leap year comes example year is 2017 and next leap year is 2020 then send 3
     */
 
     $http({
@@ -68,6 +66,8 @@ app.controller('calendarCtrl', function($scope, $http) {
         
         $scope.year = $data.year;//year we handling right now this is variable 
         $scope.present_year = $data.year;//present year this is fixed mostly
+
+        days_in_feb();
 
         $scope.month = $months[$data.month];//month we are handling  this is variable 
         $scope.present_month = $months[$data.month];//present month this is fixed mostly
@@ -99,6 +99,11 @@ app.controller('calendarCtrl', function($scope, $http) {
         //change month to previous month example 8 to 7
         $current_month--;
         //TODO when current month is 0 goto previous year logic coding
+        if($current_month==0){
+            $scope.year --;
+            $current_month=12;
+            days_in_feb();
+        }
         $scope.month = $months[$current_month];
         
         if($scope.month_first_day-1>0)
@@ -120,6 +125,11 @@ app.controller('calendarCtrl', function($scope, $http) {
         //change month to previous month example 8 to 7
         $current_month++;
         //TODO when current month is 13 goto next year logic coding
+        if($current_month==13){
+            $scope.year ++;
+            $current_month=1;
+            days_in_feb();
+        }
         $scope.month = $months[$current_month];
         
         if($scope.month_last_day+1<8)
@@ -233,6 +243,36 @@ app.controller('calendarCtrl', function($scope, $http) {
         }
         
         $scope.seven_days = $object_days;
+    }
+    function days_in_feb()
+    {
+        $leap_year = false;
+        if($scope.year % 4 == 0)
+        {
+            if($scope.year%100==0)
+            {
+                if($scope.year % 400 == 0)
+                {
+                    $leap_year = true;
+                }
+                else
+                {
+                    $leap_year = false;
+                }
+            }
+            else
+            {
+                $leap_year = true;
+            }
+        }
+        if($leap_year){
+            //change no of days in feb to 29
+            $months_day[2] = 29;
+        }
+        else{
+            //no of days in feb for non leap year
+            $months_day[2] = 28;
+        }
     }
 
 });
