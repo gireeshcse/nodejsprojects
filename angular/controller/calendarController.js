@@ -40,8 +40,15 @@ app.controller('calendarCtrl', function($scope, $http) {
     $current_month_days = [];
 
     // the month we are showing the details or the month we are handling
-
     $current_month = null;
+
+    //reached beginging day of month
+    $scope.begining_day_reached = false;
+
+    //reached ending day of month
+    $scope.ending_day_reached = false;
+
+
     //call service to get basic details of present date information
     /* The service must Return the following 
     * year - Present Year
@@ -51,6 +58,7 @@ app.controller('calendarCtrl', function($scope, $http) {
     * leap_year - If year you sent is leap year send 1 else 0 (If it is leap year set no. of days in feb to 29 else 28)
     * next_leap_year - After How many years from current year leap year comes example year is 2017 and next leap year is 2020 then send 3
     */
+
     $http({
         method : "GET",
         url : "schedule.json"
@@ -84,7 +92,8 @@ app.controller('calendarCtrl', function($scope, $http) {
     }, function myError(response) {
         console.log(response.statusText);
     });
-    
+
+    //previous month click event
     $scope.previousMonth = function(){
         console.log('Previous Month');
         //change month to previous month example 8 to 7
@@ -104,6 +113,7 @@ app.controller('calendarCtrl', function($scope, $http) {
         //assigning the seven days 
         seven_days();
     }
+    //next month click event
     $scope.nextMonth = function(){
         console.log('Next Month');
         
@@ -123,6 +133,26 @@ app.controller('calendarCtrl', function($scope, $http) {
         //assigning the seven days 
         seven_days();
     }
+
+    //previous day click event
+    $scope.previousDay = function(){
+        
+                if($scope.begining_day_reached==false)
+                {
+                    $scope.seven_start_date--;
+                    seven_days();
+                }
+        
+    };
+    //next day click event
+    $scope.nextDay = function(){
+        
+        if($scope.ending_day_reached==false)
+        {
+            $scope.seven_start_date++;
+            seven_days();
+        }
+    };
 
     function generateNoOfDays($start)
     {
@@ -176,8 +206,8 @@ app.controller('calendarCtrl', function($scope, $http) {
 
     function seven_days()
     {
-        $object_days=[{'day':'','day':''},{'day':'','day':''},
-        {'day':'','day':''},{'day':'','day':''},{'day':'','day':''},{'day':'','day':''},{'day':'','day':''}
+        $object_days=[{'day':'','date':''},{'day':'','date':''},
+        {'day':'','date':''},{'day':'','date':''},{'day':'','date':''},{'day':'','date':''},{'day':'','date':''}
         ];
         $date_temp = $scope.seven_start_date;
         for(i=0; i<7 && $date_temp<$months_day[$current_month];i++)
@@ -186,6 +216,22 @@ app.controller('calendarCtrl', function($scope, $http) {
             $object_days[i].day = $current_month_days[$date_temp];
             $object_days[i].date = $date_temp;
         }
+        //these conditions for previous day and next day
+        if($object_days[0].date==1)
+        {
+            $scope.begining_day_reached = true;
+        }else{
+            $scope.begining_day_reached = false;
+        }
+        if($object_days[6].date==$months_day[$current_month]||i<7)
+        {
+            $scope.ending_day_reached = true;
+        }
+        else
+        {
+            $scope.ending_day_reached = false;
+        }
+        
         $scope.seven_days = $object_days;
     }
 

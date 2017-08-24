@@ -92,7 +92,8 @@
           <a ng-click="nextMonth()" class="client-schedule-month-arrow w-inline-block" href="#"><img class="client-schedule-month-arrow-img" src="images/chevron-right-min.png"></a></div>
         <div class="header-separator w-hidden-medium w-hidden-small w-hidden-tiny"></div>
         <div class="client-schedule-parent-date-wrapper">
-          <div class="client-schedule-date-wrapper"><a class="alt-margin-right client-schedule-month-arrow w-inline-block" href="#"><img class="client-schedule-month-arrow-img" src="images/chevron-left-min-1.png"></a>
+          <div class="client-schedule-date-wrapper">
+              <a ng-click="previousDay()" class="alt-margin-right client-schedule-month-arrow w-inline-block" href="#"><img class="client-schedule-month-arrow-img" src="images/chevron-left-min-1.png"></a>
             
             <a class="client-schedule-date hover-color w-hidden-small w-hidden-tiny w-inline-block" ng-repeat="day in seven_days" href="#">
               <div>{{day['date']}}</div>
@@ -100,7 +101,7 @@
               <div class="date-underline"></div>
             </a>
             
-            <a class="alt-margin-left client-schedule-month-arrow w-inline-block" href="#"><img class="client-schedule-month-arrow-img" src="images/chevron-right-min.png"></a></div>
+            <a ng-click="nextDay()" class="alt-margin-left client-schedule-month-arrow w-inline-block" href="#"><img class="client-schedule-month-arrow-img" src="images/chevron-right-min.png"></a></div>
         </div>
         <div class="header-separator w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny"></div>
       </div>
