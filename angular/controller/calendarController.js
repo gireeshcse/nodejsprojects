@@ -63,6 +63,8 @@ app.controller('calendarCtrl', function($scope, $http) {
     }).then(function mySuccess(response) {
         
         $data = response.data;
+
+        $scope.records = $data.records;
         
         $scope.year = $data.year;//year we handling right now this is variable 
         $scope.present_year = $data.year;//present year this is fixed mostly

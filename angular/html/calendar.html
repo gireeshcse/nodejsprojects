@@ -305,264 +305,60 @@
           </div>
         </div>
         <div class="client-schedule-card-list">
-          <div class="schedule-card-parent-wrapper">
-            <div class="client-schedule-date-time-wrapper">
-              <div class="client-schedule-time-dropdown w-dropdown" data-delay="0">
-                <div class="schedule-time-dropdown-toggle w-dropdown-toggle">
-                  <div class="schedule-time-dropdown-text">09:00 am</div><img class="filter-down-arrow" src="images/down-arrow-min.png"></div>
-                <nav class="w-dropdown-list"><a class="w-dropdown-link" href="#">Link 1</a><a class="w-dropdown-link" href="#">Link 2</a><a class="w-dropdown-link" href="#">Link 3</a></nav>
-              </div>
-              <div class="day-date-line w-hidden-tiny"></div>
-              <div class="client-schedule-time-dropdown no-right-margin">
-                <div class="schedule-time-dropdown-toggle">
-                  <div class="date schedule-time-dropdown-text">Tue, 12 Jun 2017</div>
+          <div class="schedule-card-parent-wrapper" =>
+            <div ng-repeat="record in records">
+                <div class="client-schedule-date-time-wrapper">
+                <div class="client-schedule-time-dropdown w-dropdown" data-delay="0">
+                    <div class="schedule-time-dropdown-toggle w-dropdown-toggle">
+                    <div class="schedule-time-dropdown-text">{{record.time}}</div><img class="filter-down-arrow" src="images/down-arrow-min.png"></div>
+                    <nav class="w-dropdown-list"><a class="w-dropdown-link" href="#">Link 1</a><a class="w-dropdown-link" href="#">Link 2</a><a class="w-dropdown-link" href="#">Link 3</a></nav>
                 </div>
-              </div>
-              <div class="day-date-line longer w-hidden-medium w-hidden-small w-hidden-tiny"></div>
-            </div>
-            <div class="client-schedule-card">
-              <div class="schedule-card-top-section">
-                <div class="schedule-card-left-section">
-                  <div class="schedule-card-name">Hatha Yoga Classes for Beginners...</div>
-                  <div class="schedule-card-details-wrapper">
-                    <div class="schedule-card-details">09:00am - 09:30am</div>
-                    <div class="bullet-point-empty filled-bullet"></div>
-                    <div class="card-availability schedule-card-details">10/50 available</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">1 hr 30 min</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">Class</div>
-                  </div>
-                </div>
-                <div class="trainer-price-wrapper">
-                  <a class="schedule-card-right-section w-inline-block" href="#">
-                    <div class="client-schedule-trainer-wrapper">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Rosie</div>
+                <div class="day-date-line w-hidden-tiny"></div>
+                <div class="client-schedule-time-dropdown no-right-margin">
+                    <div class="schedule-time-dropdown-toggle">
+                    <div class="date schedule-time-dropdown-text">{{record.date}}</div>
                     </div>
-                    <div class="client-schedule-trainer-wrapper">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Jean</div>
-                    </div>
-                    <div class="client-schedule-trainer-wrapper no-right-margin">
-                      <div class="client-schedule-trainer-img plus-img">
-                        <div class="plus-text">+2</div>
-                      </div>
-                      <div class="client-schedule-trainer-name">more..</div>
-                    </div>
-                  </a>
-                  <div class="schedule-price w-hidden-main w-hidden-medium w-hidden-small">$25</div>
                 </div>
-              </div>
-              <div class="schedule-price-cta-wrapper">
-                <div class="schedule-price w-hidden-tiny">$25</div>
-                <div class="double-cta-wrapper">
-                  <a class="no-right-margin schedule-primary-cta secondary-cta w-inline-block" href="#">
-                    <div>View Details</div>
-                  </a>
-                  <a class="no-right-margin schedule-primary-cta w-inline-block" href="#">
-                    <div>Book Now</div>
-                  </a>
+                <div class="day-date-line longer w-hidden-medium w-hidden-small w-hidden-tiny"></div>
                 </div>
-              </div>
-            </div>
-            <div class="client-schedule-card">
-              <div class="schedule-card-top-section">
-                <div class="schedule-card-left-section">
-                  <div class="schedule-card-name">Advanced Hatha Yoga Class</div>
-                  <div class="schedule-card-details-wrapper">
-                    <div class="schedule-card-details">09:00am - 09:30am</div>
-                    <div class="bullet-point-empty filled-bullet"></div>
-                    <div class="card-availability not-available schedule-card-details">0/10 available</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">30 min</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">Class</div>
-                  </div>
-                </div>
-                <div class="trainer-price-wrapper">
-                  <a class="schedule-card-right-section w-inline-block" href="#">
-                    <div class="client-schedule-trainer-wrapper">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Rosie</div>
-                    </div>
-                    <div class="client-schedule-trainer-wrapper">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Jean</div>
-                    </div>
-                    <div class="client-schedule-trainer-wrapper no-right-margin">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Gina</div>
-                    </div>
-                  </a>
-                  <div class="schedule-price w-hidden-main w-hidden-medium w-hidden-small">$25</div>
-                </div>
-              </div>
-              <div class="schedule-price-cta-wrapper">
-                <div class="schedule-price w-hidden-tiny">$25</div>
-                <div class="double-cta-wrapper">
-                  <a class="no-right-margin schedule-primary-cta secondary-cta w-inline-block" href="#">
-                    <div>View Details</div>
-                  </a>
-                  <a class="no-right-margin schedule-primary-cta w-inline-block" href="#">
-                    <div>Book Now</div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="client-schedule-date-time-wrapper">
-              <div class="client-schedule-time-dropdown w-dropdown" data-delay="0">
-                <div class="schedule-time-dropdown-toggle w-dropdown-toggle">
-                  <div class="schedule-time-dropdown-text">09:30am</div><img class="filter-down-arrow" src="images/down-arrow-min.png"></div>
-                <nav class="w-dropdown-list"><a class="w-dropdown-link" href="#">Link 1</a><a class="w-dropdown-link" href="#">Link 2</a><a class="w-dropdown-link" href="#">Link 3</a></nav>
-              </div>
-              <div class="day-date-line w-hidden-tiny"></div>
-              <div class="client-schedule-time-dropdown no-right-margin">
-                <div class="schedule-time-dropdown-toggle">
-                  <div class="date schedule-time-dropdown-text">Tue, 12 Jan 2017</div>
-                </div>
-              </div>
-              <div class="day-date-line longer w-hidden-medium w-hidden-small w-hidden-tiny"></div>
-            </div>
-            <div class="client-schedule-card">
-              <div class="schedule-card-top-section">
-                <div class="schedule-card-left-section">
-                  <div class="schedule-card-name">Personal Yoga Session</div>
-                  <div class="schedule-card-details-wrapper">
-                    <div class="schedule-card-details">09:30am - 09:30am</div>
-                    <div class="bullet-point-empty filled-bullet"></div>
-                    <div class="card-availability schedule-card-details">4 trainers</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">1 hr 30 min</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">Appointment</div>
-                  </div>
-                </div>
-                <div class="trainer-price-wrapper">
-                  <a class="schedule-card-right-section w-inline-block" href="#">
-                    <div class="client-schedule-trainer-wrapper">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Rosie</div>
-                    </div>
-                    <div class="client-schedule-trainer-wrapper">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Jean</div>
-                    </div>
-                    <div class="client-schedule-trainer-wrapper no-right-margin">
-                      <div class="client-schedule-trainer-img plus-img">
-                        <div class="plus-text">+2</div>
-                      </div>
-                      <div class="client-schedule-trainer-name">more..</div>
-                    </div>
-                  </a>
-                  <div class="schedule-price w-hidden-main w-hidden-medium w-hidden-small">$25</div>
-                </div>
-              </div>
-              <div class="schedule-price-cta-wrapper">
-                <div class="schedule-price w-hidden-tiny">$25</div>
-                <div class="double-cta-wrapper">
-                  <a class="no-right-margin schedule-primary-cta secondary-cta w-inline-block" href="#">
-                    <div>View Details</div>
-                  </a>
-                  <a class="no-right-margin schedule-primary-cta w-inline-block" href="#">
-                    <div>Book Now</div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="client-schedule-card">
-              <div class="schedule-card-top-section">
-                <div class="schedule-card-left-section">
-                  <div class="schedule-card-name">Court A</div>
-                  <div class="schedule-card-details-wrapper">
-                    <div class="schedule-card-details">09:30am - 10:30am</div>
-                    <div class="bullet-point-empty filled-bullet"></div>
-                    <div class="card-availability schedule-card-details">Available</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">1 hr</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">Badmin Courts</div>
-                  </div>
-                </div>
-                <div class="trainer-price-wrapper">
-                  <a class="schedule-card-right-section w-inline-block" href="#">
-                    <div class="client-schedule-trainer-wrapper">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Rosie</div>
-                    </div>
-                    <div class="client-schedule-trainer-wrapper">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Jean</div>
-                    </div>
-                    <div class="client-schedule-trainer-wrapper no-right-margin">
-                      <div class="client-schedule-trainer-img plus-img">
-                        <div class="plus-text">+2</div>
-                      </div>
-                      <div class="client-schedule-trainer-name">more..</div>
-                    </div>
-                  </a>
-                  <div class="schedule-price w-hidden-main w-hidden-medium w-hidden-small">$25</div>
-                </div>
-              </div>
-              <div class="schedule-price-cta-wrapper">
-                <div class="schedule-price w-hidden-tiny">$25</div>
-                <div class="double-cta-wrapper">
-                  <a class="no-right-margin schedule-primary-cta secondary-cta w-inline-block" href="#">
-                    <div>View Details</div>
-                  </a>
-                  <a class="no-right-margin schedule-primary-cta w-inline-block" href="#">
-                    <div>Book Now</div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="client-schedule-date-time-wrapper">
-              <div class="client-schedule-time-dropdown w-dropdown" data-delay="0">
-                <div class="schedule-time-dropdown-toggle w-dropdown-toggle">
-                  <div class="schedule-time-dropdown-text">09:30am</div><img class="filter-down-arrow" src="images/down-arrow-min.png"></div>
-                <nav class="w-dropdown-list"><a class="w-dropdown-link" href="#">Link 1</a><a class="w-dropdown-link" href="#">Link 2</a><a class="w-dropdown-link" href="#">Link 3</a></nav>
-              </div>
-              <div class="day-date-line w-hidden-tiny"></div>
-              <div class="client-schedule-time-dropdown no-right-margin">
-                <div class="schedule-time-dropdown-toggle">
-                  <div class="date schedule-time-dropdown-text">Tue, 13 Jan 2017</div>
-                </div>
-              </div>
-              <div class="day-date-line longer w-hidden-medium w-hidden-small w-hidden-tiny"></div>
-            </div>
-            <div class="client-schedule-card">
-              <div class="schedule-card-top-section">
-                <div class="schedule-card-left-section">
-                  <div class="schedule-card-name">World Yoga Event</div>
-                  <div class="schedule-card-details-wrapper">
-                    <div class="schedule-card-details">Starts at 09:30am</div>
-                    <div class="bullet-point-empty filled-bullet"></div>
-                    <div class="card-availability schedule-card-details">11/25 available</div>
-                    <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
-                    <div class="schedule-card-details w-hidden-small w-hidden-tiny">Event (Day 1)</div>
-                  </div>
-                </div>
-                <div class="trainer-price-wrapper">
-                  <a class="schedule-card-right-section w-inline-block" href="#">
-                    <div class="client-schedule-trainer-wrapper no-right-margin">
-                      <div class="client-schedule-trainer-img"></div>
-                      <div class="client-schedule-trainer-name">Rosie</div>
-                    </div>
-                  </a>
-                  <div class="schedule-price w-hidden-main w-hidden-medium w-hidden-small">$25</div>
-                </div>
-              </div>
-              <div class="schedule-price-cta-wrapper">
-                <div class="schedule-price w-hidden-tiny">$25</div>
-                <div class="double-cta-wrapper">
-                  <a class="no-right-margin schedule-primary-cta secondary-cta w-inline-block" href="#">
-                    <div>View Details</div>
-                  </a>
-                  <a class="no-right-margin schedule-primary-cta w-inline-block" href="#">
-                    <div>Book Now</div>
-                  </a>
-                </div>
-              </div>
+                <!-- client card start -->
+                    <div class="client-schedule-card" ng-repeat="row in record.rows">
+                            <div class="schedule-card-top-section">
+                            <div class="schedule-card-left-section">
+                                <div class="schedule-card-name">{{row.title}}</div>
+                                <div class="schedule-card-details-wrapper">
+                                <div class="schedule-card-details">{{row.start_time}} - {{row.end_time}}</div>
+                                <div class="bullet-point-empty filled-bullet"></div>
+                                <div class="card-availability schedule-card-details">{{row.slot_booked}}/{{row.total_slots}} available</div>
+                                <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
+                                <div class="schedule-card-details w-hidden-small w-hidden-tiny">{{row.duration}}</div>
+                                <div class="bullet-point-empty filled-bullet w-hidden-small w-hidden-tiny"></div>
+                                <div class="schedule-card-details w-hidden-small w-hidden-tiny">{{row.type.name}}</div>
+                                </div>
+                            </div>
+                            <div class="trainer-price-wrapper">
+                                <a class="schedule-card-right-section w-inline-block" href="#">
+                                <div class="client-schedule-trainer-wrapper" ng-repeat="participant in row.participants">
+                                    <div class="client-schedule-trainer-img"></div>
+                                    <div class="client-schedule-trainer-name">{{participant.name}}</div>
+                                </div>
+                                </a>
+                                <div class="schedule-price w-hidden-main w-hidden-medium w-hidden-small">{{row.cost}}</div>
+                            </div>
+                            </div>
+                            <div class="schedule-price-cta-wrapper">
+                            <div class="schedule-price w-hidden-tiny">{{row.cost}}</div>
+                            <div class="double-cta-wrapper">
+                                <a class="no-right-margin schedule-primary-cta secondary-cta w-inline-block" href="{{row.details_url}}">
+                                <div>View Details</div>
+                                </a>
+                                <a class="no-right-margin schedule-primary-cta w-inline-block" href="{{row.booknow_url}}">
+                                <div>Book Now</div>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                <!-- Client cards end -->
             </div>
           </div>
           <div class="alt-padding client-website-header-bottom-wrapper">

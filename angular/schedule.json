@@ -2,5 +2,100 @@
     "year":2017,
     "month":8,
     "month_first_day":2,
-    "date":26
+    "date":26,
+    "records":[
+        {
+            "date":"Tue, 12 Jun 2017",
+            "time":"9:30",
+            "rows": [
+                            {
+                                "title":"Hatha Yoga Classes for Beginners",
+                                "start_time":"9:00 AM",
+                                "end_time": "9:30 AM",
+                                "slots_booked":10,
+                                "total_slots":50,
+                                "duration": "1 hr 30 Mins",
+                                "type":{
+                                    "id":1,
+                                    "name":"Appointment"
+                                },
+                                "cost": "$50",
+                                "details_url":"127.0.0.1/details/101",
+                                "booknow_url":"127.0.0.1/booknow/101",
+                                "participants":[
+                                    {"name":"Ram","img_url":"","profile_url":""},
+                                    {"name":"Ram","img_url":"","profile_url":""},
+                                    {"name":"Ram","img_url":"","profile_url":""}
+                                ]
+                            },
+                            {
+                                "title":"Hatha Yoga Classes for Beginners",
+                                "start_time":"9:00 AM",
+                                "end_time": "9:30 AM",
+                                "slots_booked":10,
+                                "total_slots":50,
+                                "duration": "1 hr 30 Mins",
+                                "type":{
+                                    "id":1,
+                                    "name":"Appointment"
+                                },
+                                "cost": "$50",
+                                "details_url":"127.0.0.1/details/101",
+                                "booknow_url":"127.0.0.1/booknow/101",
+                                "participants":[
+                                    {"name":"Ram","img_url":"","profile_url":""},
+                                    {"name":"Ram","img_url":"","profile_url":""},
+                                    {"name":"Ram","img_url":"","profile_url":""}
+                                ]
+                            }
+                    ]
+        },
+        {
+            "date":"Tue, 12 Jun 2017",
+            "time":"9:30",
+            "rows":
+                    [
+                        {
+                            "title":"Hatha Yoga Classes for Beginners",
+                            "start_time":"9:00 AM",
+                            "end_time": "9:30 AM",
+                            "slots_booked":10,
+                            "total_slots":50,
+                            "duration": "1 hr 30 Mins",
+                            "type":{
+                                "id":1,
+                                "name":"Appointment"
+                            },
+                            "cost": "$50",
+                            "details_url":"127.0.0.1/details/101",
+                            "booknow_url":"127.0.0.1/booknow/101",
+                            "participants":[
+                                {"name":"Ram","img_url":"","profile_url":""},
+                                {"name":"Ram","img_url":"","profile_url":""},
+                                {"name":"Ram","img_url":"","profile_url":""}
+                            ]
+                        },
+                        {
+                            "title":"Hatha Yoga Classes for Beginners",
+                            "start_time":"9:00 AM",
+                            "end_time": "9:30 AM",
+                            "slots_booked":10,
+                            "total_slots":50,
+                            "duration": "1 hr 30 Mins",
+                            "type":{
+                                "id":1,
+                                "name":"Appointment"
+                            },
+                            "cost": "$50",
+                            "details_url":"127.0.0.1/details/101",
+                            "booknow_url":"127.0.0.1/booknow/101",
+                            "participants":[
+                                {"name":"Ram","img_url":"","profile_url":""},
+                                {"name":"Ram","img_url":"","profile_url":""},
+                                {"name":"Ram","img_url":"","profile_url":""}
+                            ]
+                        }
+                    ]
+        }
+    ]
 }
