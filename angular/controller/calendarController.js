@@ -1,4 +1,7 @@
 app.controller('calendarCtrl', function($scope, $http) {
+    // to filter data
+    $scope.appointment_show = 1;
+    $scope.class_show = 1; 
     //to store short forms of days 
     //1 to 7 (Index Values) i.e 1st day of start from Monday 
     // 0 Index is skipped
@@ -48,6 +51,90 @@ app.controller('calendarCtrl', function($scope, $http) {
     //reached ending day of month
     $scope.ending_day_reached = false;
 
+    //get present system date
+    $system_date = new Date();
+
+    $system_current_day = $system_date.getDay();// returns value range 0 - 6 
+    if($system_current_day == 0)// i.e sunday
+    {
+        $system_current_day = 7;
+    }
+    $system_current_year = $system_date.getFullYear();
+
+    $system_current_month = $system_date.getMonth();//returns any value from range of 0 to 11
+    $system_current_month += 1; // 1 to 12
+
+    $system_current_date = $system_date.getDate();
+
+    //now caliculating the present month first day i.e mon or tue ... and so on 
+
+    $mod_value = $system_current_date % 7 ;
+    switch($mod_value){
+        case 0:
+        $current_month_start_day = $system_current_day + 1;
+        if($current_month_start_day==8)
+            $current_month_start_day = 1;//i.e monday
+        break;
+        case 1:
+        $current_month_start_day = $system_current_day; //todays day will become months 1st day day name
+        break;
+        case 2:
+        $current_month_start_day = $system_current_day-1;
+        if($current_month_start_day==0)
+            $current_month_start_day = 7;
+        break;
+        case 3:
+        $current_month_start_day = $system_current_day-2;
+        if($current_month_start_day<1)
+            $current_month_start_day = $current_month_start_day + 7;
+        break;
+        case 4:
+        $current_month_start_day = $system_current_day-3;
+        if($current_month_start_day<1)
+            $current_month_start_day = $current_month_start_day + 7;
+        break;
+        case 5:
+        $current_month_start_day = $system_current_day-4;
+        if($current_month_start_day<1)
+            $current_month_start_day = $current_month_start_day + 7;
+        break;
+        case 6:
+        $current_month_start_day = $system_current_day-6;
+        if($current_month_start_day<1)
+            $current_month_start_day = $current_month_start_day + 7;
+        break;
+
+    }
+    //actual binding start
+    $scope.year = $system_current_year;//year we handling right now this is variable 
+    $scope.present_year = $system_current_year;//present year this is fixed mostly
+
+    days_in_feb();
+
+    $scope.month = $months[$system_current_month];//month we are handling  this is variable 
+    $scope.present_month = $months[$system_current_month];//present month this is fixed mostly
+    $current_month = $system_current_month; //current Month Index
+
+    $scope.present_date = $system_current_date; //todays date i.e(1 to 31)
+
+    $scope.month_first_day =  $current_month_start_day;// Day no. of  Month example if month starts with Tuesday send 2
+    $scope.present_month_first_day =  $current_month_start_day;//Day no. of Present Month example if month starts with Tuesday send 2
+
+    $scope.seven_start_date = $system_current_date;//Default Todays Date i.e Todays is 26th Aug,2017 then send 26
+
+    //to store days of current month
+    // example For August,2017 Its can days info with array of size 32(0 to 31) where index 1 value is Tue,
+    //index 2 value is Wed and so on upto index value of 31 is Thu
+    //index 0 is ignored
+    //If param 1 is passed days generation starts from day 1 , day 2 .. and so on upto month end
+    generateNoOfDays(1);
+    //assigning the seven days 
+    seven_days();
+
+    //actual binding end
+
+
+
 
     //call service to get basic details of present date information
     /* The service must Return the following 
@@ -57,7 +144,7 @@ app.controller('calendarCtrl', function($scope, $http) {
     * date - Default Todays Date i.e Todays is 26th Aug,2017 then send 26
     */
 
-    $http({
+    /*$http({
         method : "GET",
         url : "schedule.json"
     }).then(function mySuccess(response) {
@@ -94,6 +181,7 @@ app.controller('calendarCtrl', function($scope, $http) {
     }, function myError(response) {
         console.log(response.statusText);
     });
+    */
 
     //previous month click event
     $scope.previousMonth = function(){
