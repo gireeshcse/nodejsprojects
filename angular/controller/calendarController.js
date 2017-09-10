@@ -51,8 +51,25 @@ app.controller('calendarCtrl', function($scope, $http) {
     //reached ending day of month
     $scope.ending_day_reached = false;
 
-    //get present system date
-    $system_date = new Date();
+    //get value from querystring
+    date = '09-25-2017';
+    date = '';
+
+    if(date.length == 10)
+    {
+        var $system_date = new Date();
+        
+        year = parseInt(date.substring(6,10));
+        date_gen = parseInt(date.substring(3,5));
+        month = parseInt(date.substring(0,2));
+        month = month - 1;
+        $system_date.setFullYear(year, month, date_gen);
+    }
+    else
+    {
+        $system_date = new Date();
+    }
+
 
     $system_current_day = $system_date.getDay();// returns value range 0 - 6 
     if($system_current_day == 0)// i.e sunday
