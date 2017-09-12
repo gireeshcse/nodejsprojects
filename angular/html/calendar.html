@@ -29,7 +29,12 @@
                 <div class="filter-dropdown-checkbox-field w-checkbox"><input class="w-checkbox-input" data-name="Checkbox 38" id="Checkbox-34" name="Checkbox-38" type="checkbox"><label class="filter-dropdown-field-label w-form-label" for="Checkbox-34">25 - 35</label></div><label class="filter-label" for="name">Gents</label>
                 <div class="filter-dropdown-checkbox-field w-checkbox"><input class="w-checkbox-input" data-name="Checkbox 39" id="Checkbox-35" name="Checkbox-39" type="checkbox"><label class="filter-dropdown-field-label w-form-label" for="Checkbox-35">Male</label></div>
                 <div class="filter-dropdown-checkbox-field w-checkbox"><input class="w-checkbox-input" data-name="Checkbox 40" id="Checkbox-36" name="Checkbox-40" type="checkbox"><label class="filter-dropdown-field-label w-form-label" for="Checkbox-36">Female</label></div>
+                <div class="alt-padding filter-heading" ng-repeat="x in filters">{{x}}</div>
               </form>
+              <ul>
+                <li>My Code</li>
+                
+              </ul>
               <div class="w-form-done">
                 <div>Thank you! Your submission has been received!</div>
               </div>
@@ -223,6 +228,7 @@
             </div>
           </nav>
         </div>
+        
         <div class="client-location-dropdown w-dropdown" data-delay="0">
           <div class="client-location-dropdown-toggle w-dropdown-toggle">
             <div>Camp Types&nbsp;&nbsp;&nbsp;<span class="filters-selected-text">2 selected</span></div>
@@ -264,8 +270,34 @@
               <div class="w-form-fail">
                 <div>Oops! Something went wrong while submitting the form</div>
               </div>
+
+              
             </div>
+
+            
           </nav>
+          <div class="alt-padding filter-heading" ng-repeat="x in filters">
+            {{x.name}}
+            <ul ng-repeat="(key, value) in x.sub_filters">
+                <li> {{key}}  </li>
+                 <ul ng-if="key!='Trainers'">
+                   <li ng-repeat="y in value">{{y}}</li>
+                </ul>
+                <ul ng-if="key=='Trainers'">
+                    <li ng-repeat="y in value"><img ng-src="{{y.image}}">{{y.name}}({{y.id}})</li>
+                 </ul>
+                 <!-- <ul ng-if="key=='Schedules'">
+                    <li ng-repeat="z in value">{{z}}</li>
+                 </ul>
+                 <ul ng-if="key=='Age Group'">
+                    <li ng-repeat="k in value">{{k}}</li>
+                 </ul>
+                 <ul ng-if="key=='Gender'">
+                    <li ng-repeat="l in value">{{l}}</li>
+                 </ul> -->
+            <div>
+
+          </div>
         </div>
       </div>
       <div class="customer-website-right">

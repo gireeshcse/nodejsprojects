@@ -3,6 +3,48 @@
     "month":8,
     "month_first_day":2,
     "date":26,
+    "data":{
+        "filters":
+        {
+            "basic":
+            {
+                "Service Type": ["Class", "Event", "Appointment", "Facility"],
+                "Trainers": [
+                        {
+                            "id": "40",
+                            "user_id": "103",
+                            "name": "New name",
+                            "image": "https:\/\/s3-us-west-2.amazonaws.com\/uploads-lms-test\/this is the new photo"
+                        },
+                        {
+                            "id": "224",
+                            "user_id": "790",
+                            "name": "Saku",
+                            "image": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+                        },
+                        {
+                            "id": "225",
+                            "user_id": "792",
+                            "name": "Taku",
+                            "image": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+                        },
+                        {
+                            "id": "230",
+                            "user_id": "839",
+                            "name": "ben",
+                            "image": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+                        }
+                ],
+                "Schedules": ["abc", "def", "ghi", "jkl", "mno", "pqr"]
+            },
+            "advanced":
+            {
+                "Age Group": ["18-21", "22-28", "29-35", "36-42"],
+                "Gender": ["Male", "Female"]
+            }
+        }
+    },
+
     "records":[
         {
             "date":"Tue, 12 Jun 2017",

@@ -1,0 +1,296 @@
+{
+    "data":
+    {
+        "info":
+        {
+            "id": "28",
+            "name": "Test Business",
+            "subdomain": "t3",
+            "user_id": "103",
+            "description": "<p><br><\/p>",
+            "coverimage": "1493219090-twobag.jpg",
+            "logo": "1493219128-twobag.jpg",
+            "facebook": "https:\/\/www.kfacebook.com\/?_rdr",
+            "twitter": "https:\/\/twitter.com\/",
+            "instagram": "",
+            "bloglink": "https:\/\/www.google.com",
+            "region": "global",
+            "location": "West Java, Indonesia",
+            "locationlat": "-7.090910999999999",
+            "locationlng": "107.66888700000004",
+            "business_phone_number": "1212123123",
+            "opentime": "04:00:00",
+            "closetime": "00:00:00",
+            "isParentBusiness": "0",
+            "business_category": "co-work"
+        },
+        "filters":
+        {
+            "basic":
+            {
+                "Service Type": ["Class", "Event", "Appointment", "Facility"],
+                "Trainers": [
+                        {
+                            "id": "40",
+                            "user_id": "103",
+                            "name": "New name",
+                            "image": "https:\/\/s3-us-west-2.amazonaws.com\/uploads-lms-test\/this is the new photo"
+                        },
+                        {
+                            "id": "224",
+                            "user_id": "790",
+                            "name": "Saku",
+                            "image": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+                        },
+                        {
+                            "id": "225",
+                            "user_id": "792",
+                            "name": "Taku",
+                            "image": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+                        },
+                        {
+                            "id": "230",
+                            "user_id": "839",
+                            "name": "ben",
+                            "image": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+                        }
+                ],
+                "Schedules": ["abc", "def", "ghi", "jkl", "mno", "pqr"]
+            },
+            "advanced":
+            {
+                "Age Group": ["18-21", "22-28", "29-35", "36-42"],
+                "Gender": ["Male", "Female"]
+            }
+        },
+        "classes": [
+            {
+                "id": "321104",
+                "starttime": "09:00:00",
+                "endtime": "11:00:00",
+                "date": "2017-09-12",
+                "isDelayed": "0",
+                "class_id": "305",
+                "strength": "25",
+                "available_spots": "25",
+                "class_name": "yoga Up",
+                "is_bookable": "1",
+                "price": "0.00",
+                "staff": [
+                {
+                    "name": "ben",
+                    "img_url": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+                }]
+            },
+        {
+            "id": "321037",
+            "starttime": "09:00:00",
+            "endtime": "11:00:00",
+            "date": "2017-09-12",
+            "isDelayed": "0",
+            "class_id": "304",
+            "strength": "25",
+            "available_spots": "25",
+            "class_name": "Untitled Class",
+            "is_bookable": "1",
+            "price": "0.00",
+            "staff": [
+            {
+                "name": "ben",
+                "img_url": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+            }]
+        },
+        {
+            "id": "320983",
+            "starttime": "09:00:00",
+            "endtime": "11:00:00",
+            "date": "2017-09-12",
+            "isDelayed": "0",
+            "class_id": "303",
+            "strength": "25",
+            "available_spots": "25",
+            "class_name": "freaky Class",
+            "is_bookable": "1",
+            "price": "0.00",
+            "staff": [
+            {
+                "name": "ben",
+                "img_url": "http:\/\/dashboard.lms.com\/assets\/img\/User-Profile.png"
+            }]
+        },
+        {
+            "id": "320953",
+            "starttime": "09:00:00",
+            "endtime": "11:00:00",
+            "date": "2017-09-12",
+            "isDelayed": "0",
+            "class_id": "301",
+            "strength": "25",
+            "available_spots": "25",
+            "class_name": "test Classkjjk",
+            "is_bookable": "1",
+            "price": "0.00",
+            "staff": [
+            {
+                "name": "New name",
+                "img_url": "https:\/\/s3-us-west-2.amazonaws.com\/uploads-lms-test\/this is the new photo"
+            }]
+        },
+        {
+            "id": "320904",
+            "starttime": "09:00:00",
+            "endtime": "11:00:00",
+            "date": "2017-09-12",
+            "isDelayed": "0",
+            "class_id": "297",
+            "strength": "25",
+            "available_spots": "25",
+            "class_name": "sda",
+            "is_bookable": "1",
+            "price": "0.00",
+            "staff": [
+            {
+                "name": "New name",
+                "img_url": "https:\/\/s3-us-west-2.amazonaws.com\/uploads-lms-test\/this is the new photo"
+            }]
+        }],
+        "appointments": [],
+        "events": [],
+        "facilities": [
+        {
+            "id": "22766",
+            "starttime": "23:00:00",
+            "endtime": "00:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22765",
+            "starttime": "22:00:00",
+            "endtime": "23:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22764",
+            "starttime": "21:00:00",
+            "endtime": "22:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22763",
+            "starttime": "20:00:00",
+            "endtime": "21:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22762",
+            "starttime": "19:00:00",
+            "endtime": "20:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22761",
+            "starttime": "18:00:00",
+            "endtime": "19:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22760",
+            "starttime": "17:00:00",
+            "endtime": "18:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22759",
+            "starttime": "16:00:00",
+            "endtime": "17:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22758",
+            "starttime": "15:00:00",
+            "endtime": "16:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        },
+        {
+            "id": "22757",
+            "starttime": "14:00:00",
+            "endtime": "15:00:00",
+            "dayofweek": "3",
+            "user_id": "103",
+            "notAvailable": "0",
+            "facility_id": "210",
+            "facility_name": "dsafadsf",
+            "price": "12.00",
+            "open_time": "00:00:00",
+            "close_time": "00:45:00"
+        }]
+    },
+    "metadata":
+    {
+        "offset": 0,
+        "limit": 10
+    }
+}

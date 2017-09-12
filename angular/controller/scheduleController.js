@@ -1,5 +1,7 @@
-app.controller('calendarCtrl', function($scope, $http) {
+var app = angular.module('myApp', ['ui.router']);
+app.controller('scheduleCtrl', function($scope, $http) {
     // to filter data
+    $scope.$on('$viewContentLoaded', Webflow.ready());
     $scope.appointment_show = 1;
     $scope.class_show = 1; 
     //to store short forms of days 
@@ -169,30 +171,6 @@ app.controller('calendarCtrl', function($scope, $http) {
         $data = response.data;
 
         $scope.records = $data.records;
-        $scope.filters = $data.data.filters;
-        console.log($scope.filters);
-        console.log(typeof($scope.filters));
-        x = $data.data.filters;
-        filters = [];
-        if (typeof x.basic !== 'undefined')
-        {
-            obj = new Object();
-            obj.name = 'Basic Filters';
-            obj.sub_filters= x.basic;
-            filters.push(obj);
-        }
-
-        if (typeof x.advanced !== 'undefined')
-        {
-            //filters.push('Advanced Filters');
-            obj = new Object();
-            obj.name = 'Advanced Filters';
-            obj.sub_filters=  x.advanced;
-            filters.push(obj);
-        }
-
-        $scope.filters = filters;
-        
         
         
         
@@ -258,11 +236,7 @@ app.controller('calendarCtrl', function($scope, $http) {
         
                 if($scope.begining_day_reached==false)
                 {
-                    if($scope.seven_start_date>7)
-                        $scope.seven_start_date -= 7;
-                    else
-                        $scope.seven_start_date = 1;
-
+                    $scope.seven_start_date--;
                     seven_days();
                 }
         
@@ -272,7 +246,7 @@ app.controller('calendarCtrl', function($scope, $http) {
         
         if($scope.ending_day_reached==false)
         {
-            $scope.seven_start_date += 7;
+            $scope.seven_start_date++;
             seven_days();
         }
     };
